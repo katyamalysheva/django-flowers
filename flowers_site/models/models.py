@@ -7,6 +7,7 @@ from django.contrib.auth import get_user_model
 from django.utils.translation import gettext_lazy as _
 from datetime import datetime  
 from django.core.exceptions import ValidationError
+#from wagtail.models import Page
 
 # Create your models here.
 
@@ -88,10 +89,11 @@ class Deal(models.Model):
         related_lot = Lot.objects.get(pk = self.lot.pk)
 
         if related_lot.flower_num - self.amount < 0:
-            #print("Error: Seller don't have enough flowers")
             return ValidationError("Seller don't have enough flowers")
 
         related_lot.flower_num -= self.amount 
         related_lot.save()
         super(Deal, self).save(*args, **kwargs)
+
+
 
