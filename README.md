@@ -31,7 +31,7 @@ Created models:
   
   
  2. Function seller (stored in views.py) 
-    <br> retuns a dictionary, where keys are sellers and values are dicts with customers and checks for each customer made from buying flowers from a particular seller) 
+    <br> returns a dictionary, where keys are sellers and values are dicts with customers and checks for each customer made from buying flowers from a particular seller) 
 
   
   
