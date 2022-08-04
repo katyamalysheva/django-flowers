@@ -13,10 +13,11 @@ class SignUpView(CreateView):
 
 def seller():
     sellers = {}
-    seller_list = CustomUser.objects.filter(user_type = 'S')
+    seller_list = CustomUser.objects.filter(user_type = 'S') #возращаем список продавцов
     for sel in seller_list:
-        deals = Deal.objects.filter(lot__in =  Lot.objects.filter(flower_seller = sel)).values('customer').annotate(customer_sum_checks=Sum('total_check')).order_by()
-        sellers[sel] = [deals]
+        deals = Deal.objects.filter(lot__in =  Lot.objects.filter(flower_seller = sel)).values('customer').annotate(customer_sum_checks=Sum('total_check')).order_by()# запрос возращает список покупателей и суммой покупок покупателя у продавца sel 
+        sellers[sel] = deals
     print(sellers)
+    return seller
 
 seller()
