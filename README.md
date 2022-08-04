@@ -2,7 +2,7 @@
 1. Models are stored in flower_site -> models -> models.py. 
 Created models:
  - CustomUser, inherited from AbstractUser, additional fields: (created to track users)
-    user_type (choices - Seller, Customer)
+    <br> user_type (choices - Seller, Customer)
     
  - Lot, fields: (created to track lots)
    flower_type - flower name
