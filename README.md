@@ -5,33 +5,33 @@ Created models:
     <br> user_type (choices - Seller, Customer)
     
  - Lot, fields: (created to track lots)
-   flower_type - flower name
-   flower_color - color of flower with choices
-   flower_num - amount of flowers in a lot
-   flower_price_of_single - price per flower
-   is_visible - seller can choose whether customers can see this lot
-   flower_seller - foreign key for sellers(CustomUser)
+   <br> flower_type - flower name
+   <br> flower_color - color of flower with choices
+   <br> flower_num - amount of flowers in a lot
+   <br> flower_price_of_single - price per flower
+   <br> is_visible - seller can choose whether customers can see this lot
+   <br> flower_seller - foreign key for sellers(CustomUser)
    
 - Deals, fields: (created to track deals)
-  time - time the deal was saved
-  lot - FK for lot customer choosed
-  amount - number of flowers from lot customer wants to buy 
-  customer - FK for customer 
-  total_check - price per flower from lot * amount 
+  <br> time - time the deal was saved
+  <br> lot - FK for lot customer choosed
+  <br> amount - number of flowers from lot customer wants to buy 
+  <br> customer - FK for customer 
+  <br> total_check - price per flower from lot * amount 
   
 - LotsReview, fields (created to track customer reviews for lot)
-  reviewed_lot - FK for lot 
-  author - FK for customer making the review
-  review 
+  <br> reviewed_lot - FK for lot 
+  <br> author - FK for customer making the review
+  <br> review 
   
 - LotsReview, fields (created to track customer reviews for sellers)
-  reviewed_seller - FK for seller
-  author - FK for customer making the review
-  review 
+  <br> reviewed_seller - FK for seller
+  <br> author - FK for customer making the review
+  <br> review 
   
   
  2. Fuction seller (stored in views.py) 
-    retuns a dictionary, where keys are sellers and values are dicts with customers and checks for each customer made from buying flowers from a particular seller) 
+    <br> retuns a dictionary, where keys are sellers and values are dicts with customers and checks for each customer made from buying flowers from a particular seller) 
 
   
   
